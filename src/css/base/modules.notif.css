@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    # modules.notif
+\*------------------------------------*/
+
+.notif {
+    @mixin type-scale $type-micro, 1.25;
+    z-index: 100;
+    border-radius: $global-radial;
+    padding: calc($unit * 2);
+    color: white;
+
+    position: fixed;
+    width: 100px;
+    min-height: 50px;
+    background: $color-success;
+    box-shadow: 0 0 2px black;
+    z-index: 99;
+    animation-name: notif-anim;
+    text-align: center;
+    /* should be same as timeout which deletes the instance of notify */
+    animation-duration: 2s;
+}
+
+@keyframes notif-anim {
+    0% {
+        right: -50px;
+        top: 20px;
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.85;
+        right: 20px;
+    }
+    80% {
+        opacity: 0.85;
+        top: 20px;
+    }
+    100% {
+        opacity: 0;
+        top: 0px;
+        right: 20px;
+    }
+}
+@media (--screen-from-med) {
+    @keyframes notif-anim {
+        0% {
+            right: -50px;
+            top: 50px;
+            opacity: 0;
+        }
+        20% {
+            opacity: 0.85;
+            right: 50px;
+        }
+        80% {
+            opacity: 0.85;
+            top: 50px;
+        }
+        100% {
+            opacity: 0;
+            top: 20px;
+            right: 50px;
+        }
+    }
+}

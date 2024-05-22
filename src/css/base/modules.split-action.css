@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    # modules.split-action
+\*------------------------------------*/
+
+.split-action {
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__label {
+        flex: 1 1 auto;
+    }
+    
+    &__action {
+        text-align: end;
+        margin-top: $unit;
+    }
+}

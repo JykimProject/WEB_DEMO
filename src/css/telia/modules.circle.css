@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    # modules.circle
+\*------------------------------------*/
+
+.circle {
+    &__notifications {
+        background-size: 68px;
+
+        @media (--screen-from-lrg) {
+            background-size: 100px;
+        }
+
+        &--status {
+            &-on {
+                background-image: url("../../images/kaon/kaon-logo-white.png");
+
+                &:after {
+                    background-image: url("../../images/kaon/kaon-logo-white.png");
+                }
+            }
+
+            &-warning {
+                background-image: url("../../images/kaon/kaon-logo-white.png");
+
+                &:after {
+                    background-image: url("../../images/kaon/kaon-logo-white.png");
+                }
+            }
+
+            &-error {
+                background-image: url("../../images/kaon/kaon-logo-white.png");
+
+                &:after {
+                    background-image: url("../../images/kaon/kaon-logo-white.png");
+                }
+            }
+
+            &-off {
+                background-image: url("../../images/kaon/kaon-logo-white.png");
+            }
+        }
+    }
+}

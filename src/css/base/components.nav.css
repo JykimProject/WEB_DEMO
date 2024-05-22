@@ -1,0 +1,155 @@
+/*------------------------------------*\
+    # components.nav
+\*------------------------------------*/
+
+.nav {
+
+    &__s-dashboard {
+        margin-top: calc($unit * 5);
+        margin-left: calc($unit * 5);
+
+        /*Temp*/
+        position: fixed;
+        bottom: calc($unit * 4);
+    }
+
+    &__item {
+
+        &.has--sublinks {
+                position: relative;
+
+                &:after {
+                    top: calc($unit * 3);
+                    right: calc($unit * 3);
+                    content: " ";
+                    height: 10px;
+                    width: 10px;
+                    position: absolute;
+                    pointer-events: none;
+                    border-right: 1px solid rgba(0,0,0,.3);
+                    border-bottom: 1px solid rgba(0,0,0,.3);
+                    transform: rotate(45deg);
+                    transform-origin: center;
+                    transition: transform .2s;
+                }
+
+                &.active:after {
+                    transform: rotate(-135deg) translateY(-5px);
+                }
+
+            .nav__link {
+                &.active {
+                    /*background-color: transparent;*/
+                }
+            }
+        }
+
+        &:last-child {
+            .nav__link {
+                color: $color-primary;
+            }
+        }
+        
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        @mixin type-scale $type-tiny, 1;
+        padding: calc($unit * 2.5) calc($unit * 6);
+        color: $color-text;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        transition: all .15s ease-in;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: color(black a(0.15));
+        }
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $color-text;
+            background: color(black a(0.05));
+
+            &.active {
+                background: color(black a(0.05));
+                &:after {
+                    width: 4px;
+                }
+            }
+
+            .nav__link__icon {
+                opacity: 1;
+            }
+        }
+
+        &__icon {
+            @mixin type-scale $type-medium, 1;
+            padding-right: $unit;
+            vertical-align: middle;
+            opacity: 0.4;
+            transition: all .15s ease-in;
+        }
+    }
+
+    &__sublink {
+        position: relative;
+        display: block;
+        @mixin type-scale $type-tiny, 1;
+        padding: calc($unit * 2.5) calc($unit * 6) calc($unit * 2.5) calc($unit * 8);
+        color: $color-text;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: color(black a(0.15));
+        }
+
+        &.active {
+            background: color(black a(0.05));
+            &:after {
+                width: 4px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-text;
+        }
+
+        &--gamma {
+            padding-left: calc($unit * 10);
+            @mixin type-scale calc($type-tiny - 1), 1;
+
+            &.active {
+                background: color(black a(0.03));
+            }
+        }
+    }
+
+}
+
+.main-menu {
+    overflow-y: auto;
+    /* full height - header height */
+    height: calc(100vh - 86px);
+
+    /* workaround "address bar on chrome mobile included in 100vh" */
+    @media (--screen-to-med) {
+        padding-bottom: 100px;
+    }
+}

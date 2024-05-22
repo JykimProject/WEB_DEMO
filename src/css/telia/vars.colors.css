@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+
+$logo-auth-background: url("../../images/kaon/kaon-logo-white.png") no-repeat;
+$logo-auth-sentinel-background: none;
+$logo-header-background: url("../../images/kaon/quantum.png") no-repeat center;
+$logo-footer-auth-modal: url("../../images/kaon/kaon-logo-new.png") no-repeat center;
+$color-primary: #0E7AE6;
+
+
+$color-gray: #b0b0b0;
+$color-blue: #0E7AE6;
+$color-success: #1fbb46;
+$color-text: #7e8685;
+$color-bg-alt: #121c23;
+/* Radar */
+$circle-inner-shadow-on: 0 0 25px 0px color($color-success a(0.7)), 0 0 20px 0px rgba(0,0,0,0.1), inset -27px -23px 104px 12px rgba(0,0,0,0.05);

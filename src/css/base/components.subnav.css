@@ -1,0 +1,313 @@
+/*------------------------------------*\
+    # components.subnav
+\*------------------------------------*/
+
+.subnav {
+
+    &__user {
+        position: relative;
+        color: color($color-text blackness(+10%));
+        float: left;
+        padding: calc($unit * 3) calc($unit * 4);
+        margin: 0 calc($unit * 1);
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: calc($unit * 3.5);
+            width: calc($unit * 2);
+            height: calc($unit * 2);
+            right: calc($unit * 1);
+            background: url('../../images/caret.svg') no-repeat;
+
+            @media (--screen-from-med) {
+                top: calc($unit * 4);
+            }
+        }
+
+        &__root {
+            color: color($color-text a(0.6));
+        }
+    }
+
+    &__logout {
+        display: inline-block;
+        position: relative;
+        margin: 0 calc($unit * 1);
+    }
+
+    &__link {
+        cursor: pointer;
+        color: color($color-text a(0.6) blackness(+20%));
+        padding: calc($unit * 3) calc($unit * 4);
+        transition: all .2s;
+
+        @media (--screen-to-xsml) {
+            padding-left: calc($unit * 2);
+            padding-right: calc($unit * 2);
+        }
+
+        &:hover {
+            color: color($color-text a(1) blackness(+20%));
+        }
+    }
+
+    &__lang {
+        position: relative;
+        transition: all 0.2s;
+        display: inline-block;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: calc($unit * 3.5);
+            width: calc($unit * 2);
+            height: calc($unit * 2);
+            right: calc($unit * 1);
+            background: url('../../images/caret.svg') no-repeat;
+
+            @media (--screen-to-xsml) {
+                right: calc($unit * -0.5);
+            }
+
+            @media (--screen-from-med) {
+                top: calc($unit * 4);
+            }
+        }
+    }
+
+    &__status {
+        position: relative;
+        display: inline-block;
+        color:  white;
+
+        &--on_1 {
+            display: inline-block;
+            height: 36px;
+            padding: 40px;
+            background-color:  rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+            font-size: 16px;
+            vertical-align: middle;
+
+            &:hover {
+                background-color: white;
+                color:  $color-primary;
+            }
+        }
+
+        &--on_2 {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0px 20px;
+
+            > h6 {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__notifications {
+        position: relative;
+        display: inline-block;
+        padding: calc($unit * 3) calc($unit * 4);
+        font-size: 18px;
+        text-transform: none;
+
+        @media (--screen-to-xsml) {
+            padding-left: 0;
+            padding-right: calc($unit * 2);
+        }
+
+        > .ivu-icon {
+            position: relative;
+            @mixin type-scale $type-medium, 0;
+            cursor: pointer;
+
+            .new-indicator {
+                opacity: 0;
+                position: absolute;
+                top: -13px;
+                right: -4px;
+                display: block;
+                height: 11px;
+                width: 11px;
+                background-color: $color-error;
+                border-radius: 50%;
+                transition: all .5s ease-in-out;
+
+                &--visible {
+                    opacity: 1;
+                    border: 2.5px solid color($color-error blackness(+35%));
+                }
+            }
+        }
+
+        .subnav__tooltip {
+            width: calc($unit * 60);
+            &__content {
+                padding: calc($unit * 2) 0 calc($unit * 2) calc($unit * 3);
+                max-height: 50vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                hr {
+                    border-color: color(black a(0.06));
+                }
+                .notification-message {
+                    padding-right: calc($unit * 3);
+
+                    .new-flag {
+                        padding: 0 4px 0px 4px;
+                        margin-right: 3px;
+                        border-radius: 3px;
+                        background-color: $color-success;
+                        span {
+                            position: relative;
+                            top: -1px;
+                            @mixin type-scale $type-nano / 1.2, 0.5;
+                            font-weight: $type-weight-regular;
+                            color: white;
+                        }
+                    }
+                }
+                &.nocontent {
+                    padding: calc($unit * 3);
+                }
+            }
+            &__footer {
+                padding: calc($unit * 1.8) calc($unit * 5) calc($unit * 2.5) 0;
+                margin-top: 5px;
+                background-color: color(black a(0.06));
+            }
+        }
+    }
+
+    &__tooltip {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: calc($unit * 30);
+        visibility: hidden;
+        transition: all .15s ease-in;
+        transform: translate(-50%, -20%);
+        opacity: 0;
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 6px 40px 0px rgba(0,0,0,.3);
+        z-index: 1;
+
+        &:before {
+            top: -10px;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 5px;
+            margin-left: -5px;
+        }
+
+        &--active {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        &__link {
+            @mixin type-scale $type-tiny, 1;
+            position: relative;
+            display: block;
+            padding: calc($unit * 2) calc($unit * 3);
+            color: $color-text;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            transition: all .15s ease-in;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: color(black a(0.15));
+            }
+
+            &.active,
+            &:hover,
+            &:focus {
+                color: $color-text;
+                background: color(black a(0.05));
+
+                &:after {
+                    width: 4px;
+                }
+            }
+
+            &.active {
+                &:after {
+                    background: color(black a(0.35));
+                }
+            }
+        }
+    }
+
+    &__nav {
+        @mixin clearfix;
+
+        @media (--screen-from-med) {
+            float: right;
+        }
+
+        &--primary {
+            margin-top: calc($unit * 3 * -1);
+            
+            @media (--screen-to-med) {
+                text-align: center;
+                width: 350px;
+                margin: -17px auto;
+            }
+        }
+
+        &--secondary {
+            margin-top: calc($unit * 2);
+
+            @media (--screen-from-layout) {
+                margin-top: calc($unit * 3);
+            }
+
+            @media (--screen-to-med) {
+                float: right;
+            }
+
+            .subnav__link {
+                color: color($color-text a(0.6) lightness(+20%));
+
+                &:hover {
+                    color: color($color-text a(1) lightness(+20%));
+                }
+            }
+        }
+    }
+}
+
+/* https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element */
+
+.filter-white {
+    filter: invert(92%) sepia(92%) saturate(31%) hue-rotate(70deg) brightness(103%) contrast(105%);
+}
+
+.fill-green {
+    color: lime;
+}
+
+.fill-red {
+    color:  red;
+}

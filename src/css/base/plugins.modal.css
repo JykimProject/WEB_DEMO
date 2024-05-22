@@ -1,0 +1,143 @@
+/*------------------------------------*\
+    # plugins.modal
+\*------------------------------------*/
+
+.modal {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    padding: calc($unit * 2) calc($unit * 2);
+
+    &:after {
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
+        margin-left: -.05em;
+        content: "";
+    }
+
+    &__window {
+        display: inline-block;
+        max-width: 780px;
+        width: 100%;
+        position: relative;
+        outline: 0;
+        background: white;
+        text-size-adjust: 100%;
+        vertical-align: middle;
+        text-align: left;
+        box-shadow: 0 0 40px color(black a(0.3));
+
+        &--rounded, &--rounded .ivu-spin {
+            border-radius: calc($unit * 2);
+        }
+    }
+
+    &.compact {
+        padding: calc($unit * 6);
+    }
+
+    &__tabs {
+        margin: calc($unit * 3 * -1) calc($unit * 8 * -1) calc($unit * 5) calc($unit * 8 * -1);
+        padding: 0 calc($unit * 8);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        @media (--screen-to-med) {
+            margin: calc($unit * 3 * -1) calc($unit * 4 * -1) calc($unit * 5) calc($unit * 4 * -1);
+            padding: 0 calc($unit * 4);
+            overflow-y: auto;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: calc($unit * 4);
+        top: calc($unit * 4.5);
+        cursor: pointer;
+        display: block;
+        width: 26px;
+        height: 26px;
+        transition: transform .25s ease-in-out;
+
+        @media (--screen-to-med) {
+            right: calc($unit * 2);
+            top: calc($unit * 2.5);
+        }
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 26px;
+            height: 0;
+            border-top: 1px solid rgba(0,0,0,0.3);
+            transform-origin: center;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    &__title {
+        @mixin type-scale $type-base, 1;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        padding: calc($unit * 5) calc($unit * 10) calc($unit * 4) calc($unit * 8);
+        border-bottom: 1px solid color(black a(0.1));
+        color: $color-bg-alt;
+        display: flex;
+        align-items: center;
+
+        @media (--screen-to-med) {
+            padding: calc($unit * 4) calc($unit * 5) calc($unit * 3) calc($unit * 4);
+        }
+
+        &--icon {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__content {
+        padding: calc($unit * 5) calc($unit * 8) calc($unit * 6) calc($unit * 8);
+
+        @media (--screen-to-med) {
+            padding: calc($unit * 3) calc($unit * 4) calc($unit * 4) calc($unit * 4);
+        }
+    }
+
+    &__footer {
+        padding: calc($unit * 2) calc($unit * 8) calc($unit * 6);
+        text-align: right;
+
+        @media (--screen-to-med) {
+            padding: 0 calc($unit * 4) calc($unit * 3);
+        }
+    }
+}
+
+.vpn_modal > div > div {
+    max-width: 1190px;
+}

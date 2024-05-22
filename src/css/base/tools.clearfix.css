@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    # tools.clearfix
+\*------------------------------------*/
+
+/**
+ * Mixin name: clearfix
+ * Description: applies clearfix to element
+ * Parameters: 
+ * does not take parameters
+ */
+@define-mixin clearfix {
+    &:after {
+        content:"";
+        display:block;
+        clear:both;
+    }
+}

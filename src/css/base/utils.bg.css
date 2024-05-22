@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # utils.bg
+\*------------------------------------*/
+
+.u-bg {
+    
+    &--primary {
+        background: $color-primary;
+    }
+
+    &--dark {
+        background: black;
+    }
+    
+}

@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # modules.card
+\*------------------------------------*/
+
+.card {
+    border-radius: $global-radial;
+
+    &--sml {
+        padding: calc($unit * 2) calc($unit * 3);
+    }
+    &--med {
+        padding: calc($unit * 4) calc($unit * 5);
+    }
+
+    &--neutral {
+        background: color(white blackness(+5%));
+    }
+}

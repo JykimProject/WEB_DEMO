@@ -1,0 +1,215 @@
+
+/*------------------------------------*\
+    # modules.input
+\*------------------------------------*/
+
+.ivu-input-wrapper, .ivu-input-number-input-wrap, .ivu-date-picker {
+    height: auto;
+
+    /**
+     * Input base
+     */
+    input {
+        padding: 0;
+        margin: 0;
+        border-radius: $global-radial;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: unset;
+        line-height: 1.5;
+        
+        -webkit-border-radius: $global-radial; /* Prefixed to remove border radius on iOS */
+        
+        cursor: pointer;
+        white-space: nowrap;
+        text-decoration: none;
+        font-family: $ff-sans;
+        font-weight: 300;
+        background: white;
+        border: 1px solid color(black a(0.12));
+
+        &:focus, &:hover {
+            border-color: color(black a(0.2));
+            outline: 0;
+        }
+
+        &:disabled {
+            opacity: .5;
+            background: #f6f6f6;
+        }
+
+        &::placeholder {
+            opacity: .4;
+        }
+    }
+
+    .ivu-icon {
+        cursor: pointer;
+        @mixin type-scale $type-medium, 1.70;
+
+        &:hover {
+           color: color(black a(1));
+        }
+    }
+
+    &.required input {
+        border-color: $color-error;
+    }
+
+    /**
+     * input sizes
+     */
+    &.input--sml input {
+        @mixin type-scale $type-small, 1;
+        /* height: calc($unit * 4);
+        line-height: calc($unit * 4); */
+        padding: 0 calc($unit * 2);
+    }
+
+    &.input--med input {
+        /* height: calc($unit * 6);
+        line-height: calc($unit * 6); */
+        padding: calc($unit * 1.2) calc($unit * 2);
+    }
+
+    &.input--lrg input {
+        /* height: calc($unit * 8);
+        line-height: calc($unit * 8); */
+        padding: calc($unit * 2.3) calc($unit * 4);
+    }
+
+
+    /**
+     * input types
+     */
+
+    &.input--select {
+        &--multiple {
+            min-height: 160px;    
+        }
+    }
+
+    &.input--textarea {
+        min-height: 160px;
+        resize: vertical;
+        /* border: 1px solid color(white blackness(+30%)); */
+
+        &--sml {
+            min-height: 78px;
+        }
+        textarea {
+            padding: calc($unit * 1.2) calc($unit * 2);
+            font-weight: 300;
+        }
+    }
+
+    &.input--check,
+    &.input--radio {
+        position: absolute;
+        left: -99999px;
+        opacity: 0;
+
+        /* input[type="hidden"] is added since MVC.NET
+         * generates a hidden field after the input element
+         */
+        & + label,
+        & + label {
+            padding-left: calc($unit * 2);
+
+            &:before {
+                content: '';
+                display: block;
+                float: left;
+                width: calc($unit * 2.5);
+                height: calc($unit * 2.5);
+                margin-top: calc($unit / 2);
+                border-radius: $global-radial;
+
+                transition: all .2s ease-in-out;
+
+                border: 1px solid color(black a(0.12));
+            }
+        }
+
+        &:focus {
+            & + label,
+            & + label {
+                &:before {
+                    box-shadow: 0 0 5px $color-primary;
+                }
+            }
+        }
+
+        &:checked {
+            & + label,
+            & + label {
+                &:before {
+                    background: $color-primary;
+                    border-color: transparent;
+                }
+            }
+        }
+        
+    }
+
+}
+
+.input--radio {
+    & + label,
+    & + label {
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.input--file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+    }
+
+}
+
+.input--icon {
+    &--left {
+        padding-left: calc($unit * 5);
+    }
+    &--right {
+        padding-right: calc($unit * 5);
+    }
+}
+
+.ivu-input-number {
+    width: 100%;
+    height: auto;
+
+    &.input--med input {
+        height: auto;
+        padding: calc($unit * 1.2) calc($unit * 2);
+        border: 0;
+    }
+    .ivu-input-number-handler-wrap {
+        .ivu-input-number-handler {
+            > span {
+                height: calc($unit * 3);
+                line-height: calc($unit * 3);
+            }
+            height: 50%;
+        }
+    }
+}
+
+
+/* Validation */
+.error {
+    @mixin type-scale $type-tiny, 0.75;
+    padding: calc($unit * 2) 0;
+    color: $color-error;
+}

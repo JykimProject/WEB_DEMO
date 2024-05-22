@@ -1,0 +1,129 @@
+/*------------------------------------*\
+    # components.activity
+\*------------------------------------*/
+
+.activity {
+    padding: 0 calc($unit * 8) calc($unit * 8) calc($unit * 8);
+    background: $color-bg-alt;
+
+    &__header {
+        padding: calc($unit * 8) 0 calc($unit * 4) 0;
+    }
+
+    &__title {
+        @mixin type-scale $type-medium, 1.5;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+
+    &__summary {
+        lost-utility: clearfix;
+
+        &__item {
+            @media (--screen-to-med) {
+                border-bottom: 1px solid color(white a(0.1));
+                padding-bottom: calc($unit * 4);
+                margin-bottom: calc($unit * 4);
+
+                &:last-child {
+                    /*border-bottom: 0;*/
+                    margin-bottom: 0;
+                }
+            }
+            @media (--screen-from-med) {
+                lost-column: 4/12;
+                border-right: 1px solid color(white a(0.1));
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            @media (--screen-from-xxlrg) {
+                lost-column: 3/12;
+            }
+        }
+    }
+
+    &__chart {
+        lost-utility: clearfix;
+
+        &__item {
+            margin-top: calc($unit * 2);
+            margin-bottom: calc($unit * 1);
+
+            @media (--screen-from-med) {
+                lost-column: 12/12;
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            @media (--screen-from-xxxlrg) {
+                lost-column: 6/12;
+            }
+        }
+
+        &__title {
+            margin: calc($unit * 5) 0;
+        }
+    }
+
+    &--modal {
+        margin: calc($unit * 5 * -1) calc($unit * 8 * -1) 0 calc($unit * 8 * -1);
+        padding: 0 calc($unit * 8) calc($unit * 8) calc($unit * 8);
+        background: $color-bg-alt;
+
+        @media (--screen-to-med) {
+            margin: calc($unit * 4 * -1) calc($unit * 4 * -1) 0 calc($unit * 4 * -1);
+            padding: 0 calc($unit * 4) calc($unit * 4) calc($unit * 4);
+        }
+
+        &__header {
+            padding: calc($unit * 8) 0 calc($unit * 4) 0;
+
+            @media (--screen-to-med) {
+                padding: calc($unit * 4) 0 calc($unit * 2) 0;
+            }
+        }
+
+        &__title {
+            @mixin type-scale $type-base, 1;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+        }
+
+        &__summary {
+            lost-utility: clearfix;
+
+            &__item {
+                @media (--screen-to-med) {
+                    border-bottom: 1px solid color(white a(0.1));
+                    padding-bottom: calc($unit * 4);
+                    margin-bottom: calc($unit * 4);
+
+                    &:last-child {
+                        border-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                @media (--screen-from-med) {
+                    lost-column: 4/12;
+                    border-right: 1px solid color(white a(0.1));
+
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+            &__text {
+                @media (--screen-from-med) {
+                    display: inline-block;
+                    margin-top: calc($unit * 1);
+                    max-width: 11em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    # modules.horizontal-ruler
+\*------------------------------------*/
+
+.hr {
+    &--sml {
+        margin: 0;
+    }
+    &--med {
+        margin: calc($unit * 2) 0;
+    }
+    &--lrg {
+        margin: calc($unit * 4) 0;
+    }
+    &--xlrg {
+        margin: calc($unit * 6) 0;
+    }
+
+    &--light {
+        border-bottom: 1px solid color(black a(0.1));
+    }
+}

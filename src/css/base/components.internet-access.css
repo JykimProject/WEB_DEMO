@@ -1,0 +1,16 @@
+.intaccess {
+    &--periods {
+        .ivu-date-picker {
+            .ivu-icon {
+                @mixin type-scale $type-base, 1.4;
+            }
+            input {
+                @mixin type-scale $type-tiny, 0.8;
+                padding: calc($unit * 1) calc($unit * 1.5);
+            }
+            .ivu-picker-panel-content {
+                @mixin type-scale $type-tiny, 1;
+            }
+        }
+    }
+}

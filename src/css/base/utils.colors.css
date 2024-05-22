@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    # utils.color
+\*------------------------------------*/
+
+.u-color {
+
+    &--success {
+        color: $color-success;
+    }
+
+    &--warning {
+        color: $color-warning;
+    }
+
+    &--error {
+        color: $color-error;
+    }
+
+    &--note {
+        color: $color-note;
+    }
+
+    &--brand {
+        color: $color-primary;
+    }
+
+}

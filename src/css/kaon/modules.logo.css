@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    # modules.logo
+\*------------------------------------*/
+
+.logo {
+    background: url("../../images/kaon/quantum_white.png") no-repeat center center;
+    background-size: 100%;
+
+    @media (--screen-to-xsml) {
+        display: none;
+    }
+    @media (--screen-from-layout) {
+    	width: 190px;
+    }
+}
+

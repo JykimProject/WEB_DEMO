@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    # modules.alert
+\*------------------------------------*/
+
+.alert {
+    display: block;
+    @mixin type-scale $type-small, 0.75;
+
+    &--success {
+        color: $color-success;
+    }
+
+    &--warning {
+        color: $color-error;
+    }
+    
+    &--note {
+        color: $color-note;
+    }
+
+}
+
+.ivu-notice {
+    .ivu-notice-title {
+        line-height: 27px;
+        font-weight: 500;
+        margin-left: 36px;
+    }
+    .ivu-notice-with-desc {
+        .ivu-notice-title {
+            margin-left: 51px;
+            line-height: 19px;
+        }
+    }
+}

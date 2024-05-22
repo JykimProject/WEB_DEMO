@@ -1,0 +1,13 @@
+.c-select {
+    .ivu-select-input {
+        font-weight: 300
+    }
+    .ivu-select-selection {
+        padding: 5px 0;
+        height: 38px;
+        &:focus, &:hover {
+            border-color: color(black a(0.2));
+            outline: 0;
+        }
+    }
+}

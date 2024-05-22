@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    # modules.wrapper
+\*------------------------------------*/
+
+.wrapper {
+    max-width: 1570px;
+    margin: 0 auto;
+
+    @media (--screen-to-med) {
+        padding: 0 calc($unit * 8);
+    }
+
+    @media (--screen-from-med) {
+        padding: 0 calc($unit * 12);
+    }
+}

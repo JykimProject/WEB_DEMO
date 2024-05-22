@@ -1,0 +1,152 @@
+/*------------------------------------*\
+    # modules.btn
+\*------------------------------------*/
+
+.btn {
+    &--primary {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        &:hover,
+        &:focus {
+            background: $color-primary;
+            color: white;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $color-primary;
+            }
+        }
+
+        &--negative {
+            border: 1px solid white;
+            color: white;
+            &:hover,
+            &:focus {
+                background: white;
+                color: $color-text;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &--success {
+            border: 1px solid $color-success;
+            color: $color-success;
+            &:hover,
+            &:focus {
+                background: $color-success;
+                color: white;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &--toggle {
+            border: 1px solid $color-primary;
+            color: $color-primary;
+
+            &.active {
+                background: $color-primary;
+                color: white;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                border-color: $color-text;
+                color: $color-text;
+            }
+        }
+    }
+
+    &--secondary {
+        border: 1px solid $color-primary;
+        background: none;
+        color: $color-primary;
+        &:hover,
+        &:focus {
+            background: $color-primary;
+            color: white;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $color-primary;
+            }
+        }
+
+        &--negative {
+            border: 1px solid white;
+            color: white;
+            &:hover,
+            &:focus {
+                background: white;
+                color: $color-text;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &--success {
+            border: 1px solid $color-success;
+            color: $color-success;
+            &:hover,
+            &:focus {
+                background: $color-success;
+                color: white;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+
+    &--med {
+        @media (--screen-to-med) {
+            height: calc($unit * 6);
+        }
+    }
+}
+
+.login-btn {
+    color: white;
+    background-color: $color-primary;
+    &:hover {
+        color: $color-primary;
+        background-color: white;
+    }
+}

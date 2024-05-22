@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    # modules.pill
+\*------------------------------------*/
+
+.pill {
+    @mixin type-scale $type-micro, 1;
+    display: inline-block;
+    color: white;
+    border-radius: calc($unit * 3);
+    padding: calc($unit * 0.25) calc($unit * 2);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    
+    &--enabled {
+        background-color: $color-success;
+    }
+
+    &--disabled {
+        background-color: color(black a(0.2));
+    }
+}

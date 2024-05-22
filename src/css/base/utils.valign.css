@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    # utils.valign
+\*------------------------------------*/
+
+.u-valign {
+
+    &--middle {
+        vertical-align: middle;
+    }
+
+    &--baseline {
+        vertical-align: baseline;
+    }
+    
+}

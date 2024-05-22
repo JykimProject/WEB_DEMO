@@ -1,0 +1,350 @@
+/*------------------------------------*\
+    # utils.icons
+\*------------------------------------*/
+
+[class^="icon-"], [class*=" icon-"],
+[class^="iconcustom-"], [class*=" iconcustom-"] {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icons' !important;
+}
+[class^="iconcustom-"], [class*=" iconcustom-"] {
+    font-family: 'custom-icons' !important;
+}
+
+.icon, .iconcustom {
+    &--dashboard {
+        display: block;
+        font-size: 4.8em;
+    }
+
+    &--transparent {
+      opacity: .5;
+    }
+
+    &--small {
+      @mixin type-scale $type-tiny, 0.75;
+    }
+    &--base {
+      @mixin type-scale $type-base, 1;
+    }
+    &--medium {
+      @mixin type-scale $type-medium, 1.25;
+    }
+    &--large {
+      @mixin type-scale $type-large, 1.5;
+    }
+}
+
+.icon-chevron {
+	&:after {
+	    top: calc($unit * 3);
+	    right: calc($unit * 3);
+	    content: " ";
+	    height: 7px;
+	    width: 7px;
+	    position: absolute;
+	    pointer-events: none;
+	    border-right: 1px solid rgba(0,0,0,.3);
+	    border-bottom: 1px solid rgba(0,0,0,.3);
+	    transform: rotate(45deg);
+	    transform-origin: center;
+	    transition: transform .2s;
+	}
+	&.up:after {
+		transform: rotate(-135deg);
+	}
+}
+
+.icon-device-pc:before {
+  content: "\e920";
+}
+.icon-device-mobile:before {
+  content: "\e922";
+}
+.icon-device-desktop:before {
+  content: "\e920";
+}
+.icon-device-tablet:before {
+  content: "\e91f";
+}
+.icon-device-wifi-5:before {
+  content: "\e919";
+}
+.icon-radioactive:before {
+  content: "\e917";
+}
+.icon-scan:before {
+  content: "\e918";
+}
+.icon-devices-lines:before {
+  content: "\e916";
+}
+.icon-devices:before {
+  content: "\e915";
+}
+.icon-device-lan:before {
+  content: "\e913";
+}
+.icon-device-wifi:before {
+  content: "\e914";
+}
+.icon-cloud:before {
+  content: "\e912";
+}
+.icon-cog:before {
+  content: "\e910";
+}
+.icon-eye-on:before {
+  content: "\e90e";
+}
+.icon-eye-off:before {
+  content: "\e90f";
+}
+.icon-menu-security:before {
+  content: "\e907";
+}
+.icon-menu-simple-dashboard:before {
+  content: "\e908";
+}
+.icon-menu-upgrade:before {
+  content: "\e909";
+}
+.icon-menu-administration:before {
+  content: "\e90a";
+}
+.icon-menu-settings:before {
+  content: "\e90b";
+}
+.icon-menu-wifi:before {
+  content: "\e90c";
+}
+.icon-menu-dashboard:before {
+  content: "\e90d";
+}
+.icon-dashboard-dsl:before {
+  content: "\e904";
+}
+.icon-dashboard-wireless:before {
+  content: "\e905";
+}
+.icon-dashboard-lan:before {
+  content: "\e906";
+}
+.icon-lan:before {
+  content: "\e900";
+}
+.icon-shield:before {
+  content: "\e901";
+}
+.icon-wan:before {
+  content: "\e902";
+}
+.icon-cross:before {
+  content: "\e903";
+}
+.icon-wan-lines:before {
+  content: "\e911";
+}
+.icon-menu-parent:before {
+  content: "\e91a";
+}
+.icon-magnifier:before {
+  content: "\e91b";
+}
+.icon-device-other:before {
+  content: "\e91d";
+}
+.icon-tablet:before {
+  content: "\e91f";
+}
+.icon-mobile:before {
+  content: "\e922";
+}
+.icon-pc:before {
+  content: "\e91f";
+}
+.icon-pencil:before {
+  content: "\e921";
+}
+.icon-check-circle:before {
+  content: "\e923";
+}
+.icon-search:before {
+  content: "\e986"
+}
+.icon-youtube:before {
+  content: "\ea9d"
+}
+.icon-key:before {
+  content: "\e98d"
+}
+.icon-groups:before {
+  content: "\ea58"
+}
+
+.icon-captive-portal:before {
+  content: "\e91c";
+}
+
+.icon-phone-loudspeaker:before {
+  content: "\e925";
+}
+
+.icon-usb-drive:before, .iconcustom-usb-drive:before {
+  content: "\e924";
+}
+
+.icon-device-male:before {
+  content: "\e926";
+}
+
+.icon-device-female:before {
+  content: "\e928";
+}
+
+.icon-device-baby:before {
+  content: "\e927";
+}
+
+.repeater-0 {
+  background: url('../../images/repeater0.svg') no-repeat center;
+  background-size: 70%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.repeater-1 {
+  background: url('../../images/repeater1.svg') no-repeat center;
+  background-size: 70%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.repeater-2 {
+  background: url('../../images/repeater2.svg') no-repeat center;
+  background-size: 70%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.repeater-3 {
+  background: url('../../images/repeater3.svg') no-repeat center;
+  background-size: 70%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.repeater-4 {
+  background: url('../../images/repeater4.svg') no-repeat center;
+  background-size: 70%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.signal-0 {
+  background: url('../../images/signal0.svg') no-repeat center;
+  background-size: 50%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.signal-1 {
+  background: url('../../images/signal1.svg') no-repeat center;
+  background-size: 50%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.signal-2 {
+  background: url('../../images/signal2.svg') no-repeat center;
+  background-size: 50%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.signal-3 {
+  background: url('../../images/signal3.svg') no-repeat center;
+  background-size: 50%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.signal-4 {
+  background: url('../../images/signal4.svg') no-repeat center;
+  background-size: 50%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.wired {
+  background: url('../../images/wired.svg') no-repeat center;
+  background-size: 40%;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+
+.icon-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+
+  &--success {
+      background-color: $color-success;
+  }
+}
+
+.arrow-down {
+  background: url('../../images/status-icons/arrow-down.svg') no-repeat center;
+  background-size: 60%;
+  min-width: 30px;
+  min-height: 30px;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.arrow-up {
+  background: url('../../images/status-icons/arrow-up.svg') no-repeat center;
+  background-size: 60%;
+  min-width: 30px;
+  min-height: 30px;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.checkmark {
+  background: url('../../images/status-icons/checkmark.svg') no-repeat center;
+  background-size: 60%;
+  min-width: 30px;
+  min-height: 30px;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.crossmark {
+  background: url('../../images/status-icons/crossmark.svg') no-repeat center;
+  background-size: 60%;
+  min-width: 30px;
+  min-height: 30px;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}

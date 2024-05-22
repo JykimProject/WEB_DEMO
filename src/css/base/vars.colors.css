@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+
+/**
+ * Generic colors
+ * Color naming taken from: http://www.color-blindness.com/color-name-hue/
+ */
+
+
+/**
+ * Brand colors
+ */
+$brand-primary:     #e60300;
+$brand-secondary:   teal;
+
+/**
+ * Global text color
+ */
+$color-text:        #7e8685;
+
+/**
+ * Theme colors
+ */
+$color-primary:     $brand-primary;
+$color-secondary:   $brand-secondary;
+$color-bg:          white;
+$color-bg-alt:      #121c23;
+
+/**
+ * Utility colors
+ */
+$color-error:   #e0483c;
+$color-warning: #f39544;
+$color-success: #1fbb46;
+$color-note:    #E2BA45;
+$color-link:    #1094fa;
+
+/**
+ * Inverse color
+ */
+$color-white-or-black: black;
+/* $color-text-navigation: $color-text */
+
+$color-toggle-checkbox-on: $color-success;
+
+/**
+ * Radar circles color
+ */
+$circle-outer-background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(224,224,224,1) 100%);
+$circle-outer-box-shadow: none;
+
+$circle-inner-background: url("../../images/noise-pattern.png"), linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(223,223,223,1) 100%);
+$circle-inner-shadow-on: 0 0 25px 0px color($color-success a(0.7)), 0 0 20px 0px rgba(0,0,0,0.1), inset -27px -23px 104px 12px rgba(0,0,0,0.05);
+$circle-inner-shadow-warning: 0 0 25px 0px $color-warning, 0 0 20px 0px rgba(0,0,0,0.1), inset -27px -23px 104px 12px rgba(0,0,0,0.05);
+$circle-inner-shadow-error: 0 0 25px 0px $color-error, 0 0 20px 0px rgba(0,0,0,0.1), inset -27px -23px 104px 12px rgba(0,0,0,0.05);
+$circle-inner-shadow-off: 0 0 25px 0px rgba(0,0,0,0.2), 0 0 20px 5px rgba(0,0,0,0.1), inset -27px -23px 104px 12px rgba(0,0,0,0.05);
+
+$logo-auth-background: url("../../images/sentinel-sign.svg") no-repeat;
+$logo-auth-sentinel-background: url("../../images/default/sentinel-logo.svg") no-repeat left bottom;
+$logo-header-background: url("../../images/default/sentinel-logo.svg") no-repeat;

@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    # base.globals
+\*------------------------------------*/
+
+/**
+ * Initialize typomatic in project (sets font-size and line-height
+ * on html selector.
+ */
+html {
+    @mixin typomatic-init;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: $ff-sans;
+    font-weight: $type-weight-light;
+    color: $color-text;
+    background: $color-bg;
+
+    /* Lock scrolling on mobile nav open */
+    &.is-locked {
+        overflow: hidden;
+    }
+}
+
+.page-section {
+    /* 86px = header height */
+    height: calc(100vh - 86px);
+    overflow: auto;
+
+    /* workaround "address bar on chrome mobile included in 100vh" */
+    @media (--screen-to-med) {
+        padding-bottom: 100px;
+    }
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+svg {
+    max-width: 100%;
+}
+
+s {
+    text-decoration: line-through;
+}

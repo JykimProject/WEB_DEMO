@@ -1,0 +1,52 @@
+.datausage {
+    margin-top: calc($unit * -4);
+
+    @media (--screen-from-med) {
+        /* margin-left: calc($unit * -3);
+        margin-right: calc($unit * -3); */
+    }
+
+    &--month {
+        border-right: 1px solid color(white a(0.1));
+        @media (--screen-to-med) {
+            margin-bottom: calc($unit * 3);
+            border: none;
+            > div {
+                margin-bottom: 0;
+            }
+            .up {
+                padding-top: 0;
+            }
+        }
+    }
+
+    & > div {
+        padding: calc($unit * 5) calc($unit * 3);
+        background: white;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        h6 {
+            padding-top: calc($unit * 2);
+            padding-bottom: calc($unit * 1);
+
+            &.down:before, &.up:before {
+                margin-right: 6px;
+                font-weight: $type-weight-bold;
+
+                @mixin type-scale $type-micro, 0.5;
+                @media (--screen-from-med) {
+                    @mixin type-scale $type-tiny, 0.75;
+                }
+            }
+            &.down:before {
+                content: '\2193';
+            }
+            &.up:before {
+                content: '\2191';
+            }
+        }
+
+    }
+}

@@ -1,0 +1,62 @@
+/**
+* Title: Sentinel WebUI
+* Author/s: Prototyp
+* CSS name convention: BEM
+* Global indentation: 4 spaces
+* Global units: px
+* Global prefix: none
+*/
+/*
+* Dev
+*/
+@import './style.css';
+@import './base.globals.css';
+@import './vars.responsive.css';
+@import './vars.globals.css';
+@import './vars.colors.css';
+@import './vars.typography.css';
+@import './modules.layout.css';
+@import './modules.overlay.css';
+@import './modules.container.css';
+@import './tools.typomatic.css';
+@import './tools.clearfix.css';
+@import './components.nav.css';
+@import 'vue-multiselect/dist/vue-multiselect.min.css';
+
+/*
+css 변경시 유의 사항 (최신화시 아래 내용으로 변경해줘야함.)
+
+../../images/dev 안에 이미지파일들 있음.
+
+.info-box.model-image {
+    border-color: #d6d6d6;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/dev/demo/demo-model-picture.png);
+}
+
+.header .nav-setting li:nth-child(2).en::before {
+    background-position: -30px 0;
+}
+
+.header .nav-setting li:nth-child(2).de::before {
+    background-position: -30px -30px;
+}
+
+.header .nav-setting li:nth-child(2).es::before {
+    background-position: -30px -60px;
+}
+
+.header .nav-setting li:nth-child(2).hr::before {
+    background-position: -30px -90px;
+}
+
+.header .nav-setting li:nth-child(2).it::before {
+    background-position: -30px -120px;
+}
+
+.header .nav-setting li:nth-child(2).pt::before {
+    background-position: -30px -150px;
+}
+*/

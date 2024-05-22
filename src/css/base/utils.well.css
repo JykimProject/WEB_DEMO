@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # utils.well
+\*------------------------------------*/
+
+.u-well {
+
+    &--bordered {
+        padding-bottom: calc($unit * 4);
+        border-bottom: 1px solid color(white blackness(+15%));
+    }
+
+    &--note {
+        padding: calc($unit * 2) calc($unit * 1.5);
+        background: color(white blackness(+5%));
+        border-radius: calc($unit * 1);
+    }
+
+}

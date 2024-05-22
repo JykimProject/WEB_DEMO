@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # modules.fieldset
+\*------------------------------------*/
+
+.fieldset {
+
+    /**
+     * Fieldset base
+     */
+    padding: 0;
+    margin: 0 0 calc($unit * 4) 0;
+    border: 0;
+
+    &__legend {
+        padding: 0 0 calc($unit * 5) 0;
+
+        @mixin type-scale $type-small, 1;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        font-weight: $type-weight-medium;
+    }
+
+}

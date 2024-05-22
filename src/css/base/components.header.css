@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    # components.header
+\*------------------------------------*/
+
+.header {
+    lost-utility: clearfix;
+    padding: 0 calc($unit * 2) 0 calc($unit * 6);
+    background: $color-bg-alt;
+    border-bottom: 1px solid color(white a(0.1));
+
+    @media (--screen-to-layout) {
+        padding: 0 calc($unit * 1) 0 calc($unit * 1);
+    }
+
+    &__hamburger {
+        float: left;
+        padding: calc($unit * 3) calc($unit * 2) calc($unit * 3) 0;
+
+        @media (--screen-from-layout) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        float: left;
+        padding: 0 0 calc($unit * 2) 0;
+        cursor: pointer;
+    }
+
+    &__auth {
+        lost-column: 2/12;
+        lost-move: 8/12;
+        padding: calc($unit * 5) 0;
+        text-align: right;
+
+        &__link {
+            @mixin type-scale $type-tiny, 0.75;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+        }
+    }
+
+}

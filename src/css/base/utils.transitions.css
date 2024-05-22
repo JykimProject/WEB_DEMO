@@ -1,0 +1,38 @@
+.modal-enter-active, .modal-leave-active {
+    transition: all .3s ease-in-out;
+    .modal__window {
+        transition: all .3s ease-in-out;
+    }
+}
+.modal-enter, .modal-leave-to {
+    opacity: 0;
+    .modal__window {
+        transform: translateY(-10%);
+    }
+}
+
+.submenu-enter-active, .submenu-leave-active {
+    transition: all .3s ease-in-out;
+    max-height: 400px;
+    overflow: hidden;
+}
+.submenu-enter, .submenu-leave-to {
+    max-height: 0;
+    opacity: 0;
+}
+
+.fieldin-enter-active {
+    transition: background-color 1s, outline 0.5s;
+
+    .field__lbl {
+        transition: color 1s;
+    }
+}
+.fieldin-enter-to {
+    background-color: $color-warning;
+    outline: 5px solid $color-warning;
+
+    .field__lbl {
+        color: $color-bg;
+    }
+}

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # modules.message
+\*------------------------------------*/
+
+.message {
+
+    @mixin type-scale $type-small, 1;
+    padding: calc($unit * 2) calc($unit * 4);
+    color: white;
+
+    &--warning {
+        background-color: $color-error;
+    }
+
+    &--success {
+        background-color: $color-success;
+    }
+
+    &--note {
+        background-color: $color-note;
+    }
+
+}

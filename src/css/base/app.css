@@ -1,0 +1,163 @@
+/**
+* Title: Sentinel WebUI
+* Author/s: Prototyp
+* CSS name convention: BEM
+* Global indentation: 4 spaces
+* Global units: px
+* Global prefix: none
+*/
+
+/**
+* Import: vars
+* Description: variables
+*/
+@import './vars.globals.css';
+@import './vars.typography.css';
+@import './vars.responsive.css';
+@import './vars.colors.css';
+/* ======= Custom style ======= */
+@import './vars.colors.css';
+/* ===== Custom style end ===== */
+
+/**
+* Import: tools
+* Description: tools like typomatic and other mixins / libraries
+*/
+@import './tools.typomatic.css';
+@import './tools.clearfix.css';
+
+/**
+* Import: generic
+* Description: normalize or reset CSS, box sizing
+*/
+@import './generic.boxsizing.css';
+
+/**
+* Import: base
+* Description: base structural stylings for setting the body, typography
+* and other base styles (no classes should be added here)
+*/
+@import './base.globals.css';
+@import './base.typography.css';
+
+/**
+* Import: modules
+* Description: cross project reusable 1
+*/
+@import './modules.container.css';
+@import './modules.wrapper.css';
+@import './modules.logo.css';
+/* ======= Custom style ======= */
+@import './modules.logo.css';
+/* ===== Custom style end ===== */
+@import './modules.btn.css';
+@import './modules.btn-group.css';
+@import './modules.input.css';
+@import './modules.input-list.css';
+@import './modules.select.css';
+@import './modules.switch.css';
+@import './modules.field.css';
+@import './modules.fieldset.css';
+@import './modules.alert.css';
+@import './modules.layout.css';
+@import './modules.social.css';
+@import './modules.hamburger.css';
+
+@import './modules.table.css';
+/* custom */
+@import './modules.table.css';
+
+@import './modules.formatted.css';
+@import './modules.spinner.css';
+@import './modules.circle.css';
+/* ======= Custom style ======= */
+@import './modules.circle.css';
+@import './modules.btn.css';
+/* ===== Custom style end ===== */
+@import './modules.circle-menu.css';
+@import './modules.tooltip.css';
+@import './modules.overlay.css';
+@import './modules.title.css';
+@import './modules.pill.css';
+@import './modules.scrollbar.css';
+@import './modules.tabs.css';
+@import './modules.horizontal-ruler.css';
+@import './modules.split-action.css';
+@import './modules.card.css';
+@import './modules.pager.css';
+@import './modules.notif.css';
+@import './modules.password.css';
+
+/**
+* Import: components
+* Description: specific website/app components
+*/
+@import './components.header.css';
+/* ======= Custom style ======= */
+@import './components.header.css';
+/* ===== Custom style end ===== */
+@import './components.page.css';
+@import './components.nav.css';
+@import './components.subnav.css';
+@import './components.footer.css';
+@import './components.auth.css';
+/* ======= Custom style ======= */
+@import './components.auth.css';
+@import './components.radar.css';
+/* ===== Custom style end ===== */
+@import './components.activity.css';
+@import './components.radar.css';
+@import './components.terms.css';
+@import './components.stats.css';
+@import './components.security.css';
+@import './components.internet-access.css';
+@import './components.data-usage.css';
+
+/**
+* Import: views
+* Description: specific website/app views (example: 404 view, login view)
+*/
+/* @import './views.404.css'; */
+@import './views.parental.css';
+
+/**
+* Import: utils
+* Description: reusable utilities such as floats, spacers etc.
+*/
+@import './utils.grid.css';
+@import './utils.width.css';
+@import './utils.group.css';
+@import './utils.spacers.css';
+@import './utils.padders.css';
+@import './utils.type.css';
+@import './utils.radius.css';
+@import './utils.float.css';
+@import './utils.position.css';
+@import './utils.bg.css';
+@import './utils.well.css';
+@import './utils.visibility.css';
+@import './utils.colors.css';
+@import './utils.icons.css';
+@import './utils.transitions.css';
+@import './utils.animations.css';
+@import './utils.display.css';
+@import './utils.list.css';
+@import './utils.cursor.css';
+@import './utils.valign.css';
+
+/**
+* Import: plugins
+* Description: 3rd party code, external plugin CSS etc
+* Note: when importing code from a 3rd party it should be stripped off
+* any vendor prefixes since autoprefixer will use project specific vendor prefixes
+*/
+@import './plugins.modal.css';
+@import './plugins.fontface.css';
+
+/**
+* Import: shame
+* Description: CSS shame file
+* Note: to be avoided, exists only if REALLY necessary or legacy code
+*/
+
+@import './base.shame.css';

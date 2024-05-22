@@ -1,0 +1,287 @@
+/*------------------------------------*\
+    # modules.btn
+\*------------------------------------*/
+
+.btn {
+
+    /**
+     * Button base
+     */
+    display: inline-block;
+    vertical-align: middle;
+    
+    touch-action: manipulation;
+    user-select: none;
+    
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    transition: all .15s ease-in-out;
+
+    &:focus {
+        outline: 0;
+    }
+
+    /**
+     * Button base project styling
+     */
+    font-family: $ff-sans;
+    font-weight: $type-weight-light;
+
+    /**
+     * Button styles
+     */
+    &--primary {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        &:hover,
+        &:focus {
+            background: $color-primary;
+            color: white;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $color-primary;
+            }
+        }
+
+        &--negative {
+            border: 1px solid white;
+            color: white;
+            &:hover,
+            &:focus {
+                background: white;
+                color: $color-text;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &--success {
+            border: 1px solid $color-success;
+            color: $color-success;
+            &:hover,
+            &:focus {
+                background: $color-success;
+                color: white;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &--toggle {
+            border: 1px solid $color-success;
+            color: $color-success;
+
+            &.active {
+                background: $color-success;
+                color: white;
+            }
+
+            &:disabled,
+            &.is-disabled {
+                border-color: $color-text;
+                color: $color-text;
+            }
+        }
+    }
+
+    &--secondary {
+        color: white;
+        background: $color-primary;
+        border-radius: $global-rounded;
+
+        &:hover,
+        &:focus {
+            background: color($color-primary lightness(+10%));
+            color: white;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: color(black a(0.7));
+            }
+        }
+    }
+
+    &--tertiary {
+        color: $color-text;
+        background: white;
+        border-radius: $global-rounded;
+
+        &:hover,
+        &:focus {
+            background: color(white blackness(+20%));
+            color: $color-text;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $color-primary;
+            }
+        }
+    }
+
+    &--ghost {
+        background-color: transparent;
+        color: $color-primary;
+        &:hover,
+        &:focus {
+            color: color($color-primary blackness(+10%));
+        }
+
+        &:disabled,
+        &.is-disabled {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $color-primary;
+            }
+        }
+    }
+
+
+    /**
+     * Disabled
+     */
+
+    &.is-disabled,
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        background-color: transparent;
+    }
+
+    &.is-disabled {
+        pointer-events: none;
+    }
+
+    /**
+     * Button sizes
+     */
+     &--xsml {
+        @mixin type-scale $type-nano, 1;
+        height: calc($unit * 3.5);
+        line-height: calc($unit * 3.5);
+        padding: 0 calc($unit * 2);
+    }
+
+    &--sml {
+        @mixin type-scale $type-micro, 1;
+        height: calc($unit * 5);
+        line-height: calc($unit * 5);
+        padding: 0 calc($unit * 4);
+    }
+
+    &--med {
+
+        @media (--screen-to-med) {
+            @mixin type-scale $type-micro, 1;
+            height: calc($unit * 4);
+            line-height: calc($unit * 4);
+            padding: 0 calc($unit * 4);
+        }
+
+        @media (--screen-from-med) {
+            @mixin type-scale $type-small, 1;
+            height: calc($unit * 6);
+            line-height: calc($unit * 6);
+            padding: 0 calc($unit * 4);
+        }
+    }
+    
+    &--lrg {
+
+        @media (--screen-to-med) {
+            @mixin type-scale $type-small, 1;
+            height: calc($unit * 6);
+            line-height: calc($unit * 6);
+            padding: 0 calc($unit * 6);
+        }
+
+        @media (--screen-from-med) {
+            height: calc($unit * 8);
+            line-height: calc($unit * 8);
+            padding: 0 calc($unit * 8);
+        }
+    }
+
+    /**
+     * Spacer - a placeholder for text between
+     * two or more buttons
+     */
+    &-spacer {
+        padding: 0 calc($unit);
+        @mixin type-scale $type-tiny, 0.75;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        color: color(white blackness(+50%));
+    }
+
+    &--loading {
+        position: relative;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            right: 10px;
+            margin-left: calc($unit * 1);
+            background-color: #333;
+            border-radius: 100%;  
+            animation: sk-scaleout 1.0s infinite ease-in-out; 
+        }
+    }
+
+    &--group {
+        .btn {
+            &:first-child {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:last-child {
+                border-left-width: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:not(:first-child):not(:last-child) {
+                border-left-width: 0;
+                border-radius: 0;
+            }
+        }
+    }
+}

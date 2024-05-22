@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    # modules.field
+\*------------------------------------*/
+
+.field {
+
+    /**
+     * Field base
+     */
+    margin-bottom: calc($unit * 4);
+
+    &--tny {
+        margin-bottom: 0;
+    }
+
+    &--sml {
+        margin-bottom: calc($unit * 2);
+    }
+
+    &__lbl {
+        display: block;
+        margin-bottom: calc($unit);
+        @mixin type-scale $type-tiny, 0.75;
+        color: color($color-text a(0.85));
+
+        .ivu-icon {
+            vertical-align: bottom;
+        }
+
+        &--nextToInput {
+            padding-top: calc($unit * 3);
+        }
+    }
+
+    /* Field group holds input and buttons together */
+    &__group {
+        display: table;
+
+        & > * {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+    }
+
+    /* Info text */
+    &__infotext {
+        @mixin type-scale $type-tiny, 0.75;
+        margin-top: calc($unit);
+
+        &--success {
+            color: $color-success;
+        }
+        &--note {
+            color: $color-note;
+        }
+        &--warning {
+            color: $color-error;
+        }
+    }
+
+    /* Icon on the left or right of the input */
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        &--left {
+            left: 12px;
+        }
+
+        &--right {
+            right: 12px;
+        }
+
+    }
+    
+}

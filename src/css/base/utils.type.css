@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    # utils.type
+\*------------------------------------*/
+
+.u-type {
+
+    &--bold {
+        font-weight: $type-weight-bold;
+    }
+
+    &--light {
+        font-weight: $type-weight-light;
+    }
+
+    &--regular {
+        font-weight: $type-weight-regular;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+
+    &--upper_no_spacing {
+        text-transform: uppercase;
+    }
+
+    /* Sizes */
+    &--alpha {
+        @mixin type-scale $type-xlarge, 2;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-xxlarge, 2.25;
+        }
+    }
+    
+    &--beta {
+        @mixin type-scale $type-large, 1.75;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-xlarge, 2;
+        }
+    }
+    
+    &--gamma {
+        @mixin type-scale $type-medium, 1.25;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-large, 1.75;
+        }
+    }
+    
+    &--delta {
+        @mixin type-scale $type-base, 1;
+        @media (--screen-to-xsml) {
+            @mixin type-scale $type-tiny, 1;
+        }
+        @media (--screen-from-med) {
+            @mixin type-scale $type-medium, 1.5;
+        }
+    }
+
+    &--epsilon {
+        @mixin type-scale $type-small, 0.75;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-base, 1;
+        }
+    }
+
+    &--zeta {
+        @mixin type-scale $type-tiny, 0.75;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-small, 0.85;
+        }
+    }
+
+    &--eta {
+        @mixin type-scale $type-micro, 0.5;
+        @media (--screen-to-xsml) {
+            @mixin type-scale $type-nano, 0.5;
+        }
+        @media (--screen-from-med) {
+            @mixin type-scale $type-tiny, 0.75;
+        }
+    }
+
+    &--theta {
+        @mixin type-scale $type-nano, 0.5;
+    }
+
+    /* Colors */
+    &--primary {
+        color: $color-primary;
+    }
+
+    &--secondary {
+        color: $color-secondary;
+    }
+
+    &--dark {
+        color: color(black lightness(+20%));
+    }
+
+    &--negative {
+        color: white;
+    }
+
+    &--neutral {
+        color: color($color-text a(0.6));
+
+        &--negative {
+            color: color(white a(0.6));
+        }
+    }
+
+    &--opaque {
+        opacity: 0.6;
+    }
+
+    &--success {
+        color: $color-success;
+    }
+
+    &--note {
+        color: $color-note;
+    }
+
+    &--warning {
+        color: $color-error;
+    }
+
+    &--link {
+        color: $color-link;
+    }
+
+
+    /* Shorten long links */
+    &--shorten {
+        /* These are technically the same, but use both */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        -ms-word-break: break-all;
+        /* This is the dangerous one in WebKit, as it breaks things wherever */
+        word-break: break-all;
+        /* Instead use this non-standard one: */
+        word-break: break-word;
+
+        /* Adds a hyphen where the word breaks, if supported (No Blink) */
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    &--nowrap {
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    &-sml {
+        @media(--screen-to-med) {
+            &--left {
+                text-align: left;
+            }
+            &--center {
+                text-align: center;
+            }
+        }
+    }
+}

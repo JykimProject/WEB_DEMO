@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    # modules.switch
+\*------------------------------------*/
+
+.switch {
+
+    /**
+     * Switch base
+     */
+    &__checkbox {
+        display: none;
+    }
+
+    &__label {
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__switcher {
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: calc($unit * 2);
+        overflow: hidden;
+        user-select: none;
+        width: 32px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    &__inner {
+        display: block;
+        margin-top: 9px;
+        height: 4px;
+        background: color(black a(0.1));
+        border-radius: $global-rounded;
+    }
+
+    &__switch {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #999999;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        border-radius: 50px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__checkbox:checked+&__label &__inner {
+        margin-left: 0;
+    }
+
+    &__checkbox:checked+&__label &__switch {
+        right: 0;
+        background-color: $color-toggle-checkbox-on;
+    }
+
+    &__text {}
+
+}
+
+.ivu-switch {
+    display: inline-block;
+    width: 32px;
+    height: 5px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    background-color: color(black a(0.1));
+}
+
+.ivu-switch:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #999999;
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: -1px;
+}
+
+.ivu-switch:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.ivu-switch:focus:hover {
+    box-shadow: none;
+}
+
+.ivu-switch-checked {
+    margin-left: 0;
+    background-color: #ccc;
+    border-color: #ccc;
+
+    &:after {
+        right: 0;
+        background-color: $color-toggle-checkbox-on;
+        left: 21px;
+    }
+}
+
+.switch_pos_unset > div {
+    position: unset;
+}

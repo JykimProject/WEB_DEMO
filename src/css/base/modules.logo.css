@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # modules.logo
+\*------------------------------------*/
+
+.logo {
+    width: 90px;
+    height: 48px;
+    display: inline-block;
+    background: url("../../images/default/sentinel-logo.svg") no-repeat center center;
+    background-size: 90%;
+
+    @media (--screen-from-layout) {
+    	width: 90px;
+        height: 60px;
+        background-size: 100%;
+    }
+}
+

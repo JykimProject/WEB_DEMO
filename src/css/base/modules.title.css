@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    # modules.title
+\*------------------------------------*/
+
+.title {
+
+    &--gamma {
+        @mixin type-scale $type-small, 0.75;
+        @media (--screen-from-med) {
+            @mixin type-scale $type-base, 1;
+        }
+    }
+    
+}

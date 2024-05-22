@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    # modules.hamburger
+\*------------------------------------*/
+
+ .hamburger {
+    /* Reset button styling */
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    position: relative;
+    display: block;
+    width: calc($unit * 5);
+    height: calc($unit * 2.75);
+    padding: calc($unit * 3);
+
+    span,
+    &:after,
+    &:before {
+        position: absolute;
+        left: 6px;
+        width: calc($unit * 4);
+        height: 1px;
+        background: white;
+        transition: all .2s ease-in-out;
+        transform: translate3d(0,0,0);
+    }
+
+    span {
+        top: 18px;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+    }
+
+    &:after {
+        bottom: 11px;
+    }
+    &:before {
+        top: 12px;
+    }
+
+    &.is-open {
+        span {
+            opacity: 0;
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+            bottom: 17px;
+        }
+        
+        &:before {
+            transform: rotate(45deg);
+            top: 17px;
+        }
+
+    }
+
+ }

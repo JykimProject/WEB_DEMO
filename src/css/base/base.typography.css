@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    # base.typography
+\*------------------------------------*/
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: $type-weight-light;
+}
+h1 {
+    @mixin type-scale $type-xlarge, 2;
+}
+h2 {
+    @mixin type-scale $type-large, 1.75;
+}
+h3 {
+    @mixin type-scale $type-medium, 1.5;
+}
+h4, h5, h6 {
+    @mixin type-scale $type-base, 1;
+}
+
+@media (--screen-from-med) {
+    h1 {
+        @mixin type-scale $type-xxlarge, 2.25;
+    }
+    h2 {
+        @mixin type-scale $type-xlarge, 2;
+    }
+    h3 {
+        @mixin type-scale $type-large, 1.75;
+    }
+    h4, h5, h6 {
+        @mixin type-scale $type-medium, 1.5;
+    }
+}
+
+/**
+ * Paragraphs
+ */
+p {
+    margin: 0;
+}
+
+/**
+ * Lists (ol, ul, dd)
+ */
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ol {}
+ol li {}
+ul {}
+ul li {}
+dd {}
+dl dt {}
+dl dd {}
+
+/**
+ * Anchors
+ */
+a {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:link {}
+    &:hover {
+        color: color($color-primary blackness(+25%));
+    }
+    &:focus {
+        color: color($color-primary blackness(+25%));
+    }
+    &:visited {}
+}
+
+/**
+ * Typographic details
+ */
+hr {
+    margin: calc($unit * 4) 0;
+    border: 0;
+    height: 1px;
+    border-bottom: 1px solid color(white blackness(+15%));
+}
+em {}
+b, strong {
+    font-weight: $type-weight-medium;
+}
+address {}
+small {}
+pre {}
+code {}
+sub {}
+sup {}
+strike {}
+
+/**
+ * Tables
+ */
+table {
+    th {
+        text-align: left;
+    }
+}

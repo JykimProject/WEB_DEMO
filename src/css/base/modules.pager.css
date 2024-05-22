@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    # modules.pager
+\*------------------------------------*/
+.pager {
+    &__item,
+    .ivu-page-item {
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
+    &__anchor,
+    a {
+        color: color($color-text lightness(+25%));
+        font-family: 'Rubik', Helvetica, Arial, sans-serif;
+        font-weight: $type-weight-light;
+    }
+    .is-current a,
+    .ivu-page-item-active a {
+        font-weight: $type-weight-bold;
+        font-family: 'Rubik', Helvetica, Arial, sans-serif;
+        color: $color-primary;
+        border-bottom: 2px solid $color-primary;
+    }
+
+    .is-disabled a,
+    .ivu-page-disabled a  {
+        color: color($color-text lightness(+25%));;
+    }
+
+}
+
+.ivu-page-item:hover a {
+    color: $color-primary;
+}
+
+.ivu-page-prev:hover a, .ivu-page-next:hover a {
+    color: $color-primary;
+}
+
+.ivu-switch-disabled.ivu-switch-checked {
+    background-color: #f4f4f4;
+    opacity: 1;
+}
+
+.ivu-switch-disabled.ivu-switch-checked:after {
+    background: #d5d5d5;
+}

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'manrope';
+    src: url(../../fonts/Manrope-VariableFont_wght.ttf) format('woff');
+}
+
+//$theme-colors: (
+//  "secondary": #6c43bf
+//);
+
+$font-family-sans-serif: (
+	manrope,
+  san-serif
+);
+
+//.btn-outline-secondary:hover {
+//  background-color: rgba( 108, 67, 191, 0.08) !important;
+//  color: #6c43bf !important;
+//}
+
+//.card-header {
+//  background-color: rgba(245, 245, 245, 1) !important;
+//}
+
+//.el-loading-spinner .path {
+//  stroke: #48227C;
+//}
+
+//.el-loading-spinner .el-loading-text {
+//  color: #48227C;
+//}
+
+//.bg-play {
+//  background-color: #48227c !important;
+//}
+
+//.navbar-play .navbar-nav .nav-link {
+//  color: rgba(255, 255, 255, 0.75);
+//}
+//.navbar-play .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+//  color: rgba(255, 255, 255, 0.85);
+//}
+
+//.navbar-play .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+//  color: #fff;
+//}
+
+//.dropdown-item.active, .dropdown-item:active {
+//  color: #fff;
+//  text-decoration: none;
+//  background-color: #6c43bf !important;
+//}
+// .el-tabs__active-bar {
+//   background-color: #6c43bf !important;
+// }
+
+// .el-tabs__item.is-active {
+//   color: #6c43bf !important;
+// }
+
+// .el-tabs__item:hover {
+//   color: #6c43bf !important;
+// }
+// maybe use later - jiwan
+// $font-family-monospace: (
+// 	sans-serif
+// );
+// .btn-outline-secondary:not(:disabled):not(.disabled).active {
+//   background-color: rgba( 108, 67, 191, 8 ) !important;
+//   border-color: rgba( 108, 67, 191, 100 ) !important;
+//   color: #6c43bf !important;
+// }
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap-vue/src/index.scss';

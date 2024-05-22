@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    # modules.tabs
+\*------------------------------------*/
+
+.tabs {
+    display: inline-flex;
+
+    &__item {
+        flex: 1 1 auto;
+        padding-right: calc($unit * 4);
+    }
+
+    &__link {
+        /**
+        * Button base
+        */
+        display: inline-block;
+        vertical-align: middle;
+        
+        touch-action: manipulation;
+        user-select: none;
+        
+        cursor: pointer;
+        white-space: nowrap;
+        text-decoration: none;
+        text-align: center;
+        border: 0;
+        padding: calc($unit * 2) 0;
+        background: transparent;
+        transition: all .2s ease-in;
+
+        color: color($color-text lightness(+25%));
+        text-transform: uppercase;
+        letter-spacing: .1em;
+
+        border-bottom: 2px solid transparent;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+
+        &.is-active {
+            color: $color-primary;
+            border-bottom: 2px solid $color-primary;
+        }
+    }
+
+}

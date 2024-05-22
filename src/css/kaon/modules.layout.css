@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    # modules.layout
+\*------------------------------------*/
+
+.layout {
+
+    &--split {
+        /*@media (--screen-from-layout) {*/
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            min-height: 1024px;
+        /*}*/
+
+        &__sidebar {
+            /* transition: transform 0.2s ease-in-out; */
+/*
+            @media (--screen-to-layout) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: white;
+                z-index: 9999;
+                box-shadow: 4px 0px 9px rgba(0,0,0,0.05);
+                border-right: 1px solid color(black a(0.1));
+                transform: translateX(-100%);
+            }
+*/
+            /*@media (--screen-from-layout) {*/
+                z-index: 999;
+                display: table-cell;
+                vertical-align: top;
+                width: 15%;
+                -webkit-transition: 0.3s ease;
+                transition: 0.3s ease;
+
+                &.collapsed {
+                    width: 10%;
+                }
+             /*}*/
+
+            &.is-active {
+                transform: translateX(0);
+                width: fit-content;
+            }
+        }
+
+        &__sidebar-logo {
+            display: none;
+            width: 90px;
+            height: 48px;
+            margin-left: calc($unit * 6.5);
+            margin-bottom: calc($unit * 2);
+            background: $logo-header-background;
+            background-size: 100%;
+
+            @media (--screen-to-xsml) {
+                display: block;
+            }
+        }
+
+        &__content {
+            /*@media (--screen-from-layout) {*/
+                display: table-cell;
+                vertical-align: top;
+                width: 85%;
+                -webkit-transition: 0.3s ease;
+                transition: 0.3s ease;
+
+                &.collapsed {
+                    width: 90%;
+                }
+            /*}*/
+        }
+
+    }
+    
+}

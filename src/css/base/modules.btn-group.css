@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    # modules.btn-group
+\*------------------------------------*/
+
+.btn-group {
+
+    /**
+     * Btngroup base
+     */
+     display: inline-block;
+
+    @mixin clearfix;
+
+    &--radial {
+
+        .btn {
+            &:first-child {
+                border-radius: $global-radial 0 0 $global-radial;
+            }
+
+            &:last-child {
+                border-radius: 0 $global-radial $global-radial 0;
+            }
+        }
+
+    }
+
+    &--rounded {
+
+        .btn {
+            &:first-child {
+                border-radius: $global-rounded 0 0 $global-rounded;
+            }
+
+            &:last-child {
+                border-radius: 0 $global-rounded $global-rounded 0;
+            }
+        }
+
+    }
+
+    .btn {
+        float: left;
+    }
+
+    .btn + .btn {
+        margin-left: -1px;
+    }
+
+}

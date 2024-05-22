@@ -1,0 +1,65 @@
+.input-filler {
+	@media (--screen-from-med) {
+		height: 60px;
+		width: 100%;
+	}
+}
+
+.bottom-margin-on-mobile {
+	margin-bottom: 70px;
+	@media (--screen-from-med) {
+		margin-bottom: 0;
+	}
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+.vanilla-color-picker-single-color {
+	width: 24px;
+    height: 24px;
+    margin: 1px 5px;
+	border-radius: 50%;
+	cursor: pointer;	
+
+	&-picked {
+		border: 2px dashed black;
+		outline: none;
+	}
+}
+
+.just-picker2 {
+	width: 16px;
+	height: 16px;
+}
+
+.u-list--primary__item {
+	.field {
+		margin-bottom: 0px;
+	}
+}
+
+.vanilla-color-picker {
+	box-shadow: none;
+	position: relative;
+	top: 0 !important;
+	left: 0 !important;
+	margin-top: 10px;
+}
+
+.u-list--parental-group__color-picker {
+	float: none;
+	width: 100%;
+}
+
+.parental__color {
+	cursor: pointer;
+}
+
+input, textarea {
+	caret-color: black;
+}
+
+section:not(.radar) .page {
+    position: relative;
+}

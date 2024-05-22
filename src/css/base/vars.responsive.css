@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    # vars.responsive
+\*------------------------------------*/
+
+@custom-media --screen-from-xsml    (min-width: 18em); /* 384px */
+@custom-media --screen-to-xsml      (max-width: 23.9375em); /* 384px */
+
+@custom-media --screen-from-sml    (min-width: 34em); /* 544px */
+@custom-media --screen-to-sml      (max-width: 33.9375em); /* 543px */
+
+@custom-media --screen-from-med   (min-width: 48em); /* 768px */
+@custom-media --screen-to-med     (max-width: 47.9375em); /* 767px */
+
+@custom-media --screen-from-lrg    (min-width: 62em); /* 992px */
+@custom-media --screen-to-lrg      (max-width: 61.9375em); /* 991px */
+
+@custom-media --screen-from-xlrg   (min-width: 75em); /* 1200px */
+@custom-media --screen-to-xlrg     (max-width: 74.9375em); /* 1199px */
+
+@custom-media --screen-from-xxlrg  (min-width: 90em); /* 1440px */
+@custom-media --screen-to-xxlrg    (max-width: 89.9375em); /* 1439px */
+
+@custom-media --screen-from-xxxlrg  (min-width: 110em);
+@custom-media --screen-to-xxxlrg    (max-width: 109.9375em);
+
+/* Custom breakpoints */
+
+@custom-media --screen-from-layout (min-width: 84em);
+@custom-media --screen-to-layout   (max-width: 83.9375em);
+
+@custom-media --screen-from-circles-lrg (min-width: 105em);
+@custom-media --screen-to-circles-lrg   (max-width: 104.9375em);

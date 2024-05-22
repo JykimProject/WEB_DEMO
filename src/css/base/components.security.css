@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    # components.security
+\*------------------------------------*/
+
+.security {
+    padding: 0 calc($unit * 8) calc($unit * 12) calc($unit * 8);
+    background: $color-bg-alt;
+
+    @media (--screen-to-med) {
+        padding: 0 calc($unit * 5) calc($unit * 12) calc($unit * 5);
+    }
+
+    &__header {
+        padding: calc($unit * 8) 0 calc($unit * 4) 0;
+    }
+
+    &__title {
+        @mixin type-scale $type-medium, 1.5;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+
+        @media (--screen-to-sml) {
+            img {
+                width: 20px;
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: calc($unit * 2);
+        margin-bottom: calc($unit * 6);
+
+        &__item {
+            display: inline-block;
+            padding-right: $unit;
+        }
+
+        &__link {
+            position: relative;
+            display: inline-block;
+            padding: $unit calc($unit * 0.5);
+            opacity: 0.3;
+            transition: all .2s;
+            color: white;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: white;
+                transition: all .2s;
+            }
+
+            &.active,
+            &:hover {
+                opacity: 1;
+                color: white;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__summary {
+
+        &__item {
+            @media (--screen-to-med) {
+                border-bottom: 1px solid color(white a(0.1));
+                padding-bottom: calc($unit * 4);
+                margin-bottom: calc($unit * 4);
+
+                &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+            @media (--screen-from-med) {
+                border-right: 1px solid color(white a(0.1));
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+
+        &__content {
+            padding-left: calc($unit * 7);
+        }
+
+        &__icon {
+            float:left; 
+            margin-left: calc($unit * 7 * -1);
+        }
+    }
+} 

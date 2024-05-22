@@ -1,0 +1,11 @@
+.input-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.input-list-icon {
+    font-size: 18px;
+    align-self: center;
+    cursor: pointer;
+}
